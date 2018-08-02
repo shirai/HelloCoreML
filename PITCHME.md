@@ -70,12 +70,11 @@ iPhoneだけで動く人工知能アプリが
 
 ### Core ML利用のメリット
 
-- 人工知能・機械学習の専門知識  
-  　→ 不要
-- 外部サーバーとの通信  
-  　→ 不要
-  - オフラインでも利用可能
-  - 個人情報の送信なども発生しない
+- 人工知能・機械学習の専門知識 不要
+- 外部サーバーとの通信 不要  
+  　→ オフラインでも利用可能  
+  　→ 個人情報の送信なども発生しない  
+  　　  ※セキュリティ面に優れる
 
 ---
 
@@ -84,7 +83,7 @@ iPhoneだけで動く人工知能アプリが
 - 学習モデルの容量分、アプリの容量が大きくなる
 - 消費電力が大きい（らしい）
 
-→ ただしこれらは今後のストレージ容量の拡大や、CPU・OS性能の向上で改善が見込まれます
+→ ただしこれらは今後のストレージ容量の拡大や、CPU・OS性能の向上で改善が見込まれます
 
 ---
 
@@ -94,10 +93,16 @@ iPhoneだけで動く人工知能アプリが
 
 Visionは画像を解析する枠組みで、  
 その結果をCore MLに送れます。  
-画像を識別するための**学習モデル**を用意すれば、  
-画像から撮影した場所（例：空港・寝室・森）や、  
-主な被写体（例：木・動物・食品・車・人）などを  
-判別できます。
+
+<img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2017/09/db81e861-1e06-4d14-8915-90707d9b114c.png">
+
+---
+
+「既存機械学習ライブラリの学習モデル」を  
+「Core ML用の学習モデル」に変換するツールも  
+用意されています。
+
+<img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2017/09/support-library-960x319.png">
 
 ---
 
@@ -107,30 +112,32 @@ Visionは画像を解析する枠組みで、
 
 ### 作った画像認識アプリ
 
-<img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" >
-
----
-
-1. 画像を選択
-2. Core MLに渡して解析
-3. 「African Elephant」の画像  
-   という結果を取得・表示
-
-2,3の部分で「Vision」を利用しています。
+<img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px">
 
 ---
 
 「アフリカ象」の画像を渡した場合  
-　→ 「African elephant」という結果
+　→ 61%の確率で「African elephant」
 
-<img width="817" alt="2018-08-02 22 59 49"  src="https://user-images.githubusercontent.com/16277668/43588612-d3831480-96a7-11e8-843d-6b50c1820e23.png">
+<img width="820" alt="2018-08-02 22 59 49"  src="https://user-images.githubusercontent.com/16277668/43588612-d3831480-96a7-11e8-843d-6b50c1820e23.png">
 
 ---
 
 「インド象」の画像を渡した場合  
-　→ 「Indian elephant」という結果
+　→ 90%の確率で「Indian elephant」
 
 <img width="820" alt="2018-08-02 22 59 29" src="https://user-images.githubusercontent.com/16277668/43588611-d34ead80-96a7-11e8-8519-64ba90b82af8.png">
+
+---
+
+#### 処理概要
+
+1. 画像を選択
+2. Core MLに渡して解析
+3. 何の画像か？という結果を取得
+4. テキストとして画面に表示
+
+2,3の部分で「Vision」を利用しています。
 
 ---
 
@@ -142,12 +149,12 @@ Visionは画像を解析する枠組みで、
 /// 画像を予測する
 /// - Parameter inputImage: 解析対象の画像
 func predict(inputImage: UIImage) {
-  myTextView.text = ""
+  textView.text = ""
   let model = try! VNCoreMLModel(for: Resnet50().model)
   let request = VNCoreMLRequest(model: model) { request, error in
     for result in request.results as! [VNClassificationObservation] {
       let per = Int(result.confidence * 100)
-      self.myTextView.text.append("これは\(per)%の確率で\(result.identifier)です。\n")
+      self.textView.text.append("これは\(per)%の確率で\(result.identifier)です。\n")
     }
   }
   let ciImage = CIImage(image: inputImage)!
@@ -159,23 +166,23 @@ func predict(inputImage: UIImage) {
 
 ### 重要なポイント
 
-iOS単体では、
+iOS単体では **<font color="red">学習することはできない</font>**
 
-**学習することはできない**
+* NG: 学習モデルを作る・更新する
+* OK: 用意した学習モデルに対してデータを流して解析させる
 
-「学習モデルを作る」ことができず、  
-「用意した学習モデルに対してデータを流して解析させる」  
-ことしかできないのが現状です。
+<img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2017/09/c35ebf2d-ee94-4448-8fae-16420e7cc4ed.png">
 
 ---
 
 ## これからできるようになること（iOS12〜）
 
-**学習することができるようになる**
+**<font color="red">学習することができる</font>**
+
+iOS12では機械学習がバージョンアップされ、  
+「Create ML」が追加されます。
 
 「学習モデルを作る」ことができるようになります！
-
-Create ML
 
 ---
 
@@ -187,7 +194,7 @@ Create ML
 おまけ: 参考サイト
 
 - [機械学習 \- Apple Developer](https://developer.apple.com/jp/machine-learning/)
-
+- [\[iOS 11\] Core MLで焼き鳥を機械学習させてみた ｜ Developers\.IO](https://dev.classmethod.jp/smartphone/iphone/ios-11-core-ml-2/)
 
 ---
 
