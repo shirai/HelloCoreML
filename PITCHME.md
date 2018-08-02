@@ -29,7 +29,7 @@ iOSチームのアーキテクトとして
 いくつかネタはあるのですが、  
 その中でも「ホットでキャッチー」な
 
-**iOSで人工知能（画像解析）アプリを作る**
+**iOSで人工知能（画像認識）アプリを作る**
 
 というお話をしたいと思います。
 
@@ -101,29 +101,47 @@ Visionは画像を解析する枠組みで、
 
 ---
 
-<table style="vertical-align: inherit;">
-<tr>
-  <td colspan=2>作ったアプリ</td>
-</tr>
-<tr>
-  <td><img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" ></td>
-  <td>1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示</td>
-</tr>
-</table>
+## 今できること（iOS11）
 
-<img width="817" alt="2018-08-02 22 59 49" src="https://user-images.githubusercontent.com/16277668/43588612-d3831480-96a7-11e8-843d-6b50c1820e23.png">
+---
+
+### 作った画像認識アプリ
+
+<img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" >
+
+---
+
+1. 画像を選択
+2. Core MLに渡して解析
+3. 「African Elephant」の画像  
+   という結果を取得・表示
+
+2,3の部分で「Vision」を利用しています。
+
+---
+
+「アフリカ象」の画像を渡した場合  
+　→ 「African elephant」という結果
+
+<img width="817" alt="2018-08-02 22 59 49"  src="https://user-images.githubusercontent.com/16277668/43588612-d3831480-96a7-11e8-843d-6b50c1820e23.png">
+
+---
+
+「インド象」の画像を渡した場合  
+　→ 「Indian elephant」という結果
+
 <img width="820" alt="2018-08-02 22 59 29" src="https://user-images.githubusercontent.com/16277668/43588611-d34ead80-96a7-11e8-8519-64ba90b82af8.png">
 
 ---
 
-## 書いたコード
+#### 書いたコード
 
 諸々パフォーマンス気を気にせず「画像解析するだけ」なら10行程度書けば実装できます。
 
 ```swift
 /// 画像を予測する
 /// - Parameter inputImage: 解析対象の画像
-private func predict(inputImage: UIImage) {
+func predict(inputImage: UIImage) {
   myTextView.text = ""
   let model = try! VNCoreMLModel(for: Resnet50().model)
   let request = VNCoreMLRequest(model: model) { request, error in
@@ -137,9 +155,11 @@ private func predict(inputImage: UIImage) {
 }
 ```
 
-## 今できること（iOS11）
-
 ---
+
+### 重要なポイント
+
+iOS単体では、
 
 **学習することはできない**
 
