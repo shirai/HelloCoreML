@@ -101,21 +101,13 @@ Visionは画像を解析する枠組みで、
 
 ---
 
-## 作ったもの
-
-| アプリの動き | |
-|:--:|:--|
-| 1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示 | <img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" >|
-
----
-
-<table>
+<table style="vertical-align: inherit;">
 <tr>
   <td colspan=2>作ったアプリ</td>
 </tr>
 <tr>
   <td><img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" ></td>
-  <td style="vertical-align: inherit;">1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示</td>
+  <td>1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示</td>
 </tr>
 </table>
 
