@@ -115,7 +115,7 @@ Visionは画像を解析する枠組みで、
 </tr>
 <tr>
   <td><img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" ></td>
-  <td>1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示</td>
+  <td　vertical-align="inherit">1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示</td>
 </tr>
 </table>
 
