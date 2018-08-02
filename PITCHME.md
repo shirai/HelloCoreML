@@ -29,7 +29,7 @@ iOSチームのアーキテクトとして
 いくつかネタはあるのですが、  
 その中でも「ホットでキャッチー」な
 
-- **iOSで人工知能（画像解析）アプリを作る**
+**iOSで人工知能（画像解析）アプリを作る**
 
 というお話をしたいと思います。
 
@@ -84,14 +84,17 @@ iPhoneだけで動く人工知能アプリが
 - 学習モデルの容量分、アプリの容量が大きくなる
 - 消費電力が大きい（らしい）
 
+→ ただしこれらは今後のストレージ容量の拡大や、CPU・OS性能の向上で改善が見込まれます
+
 ---
 
 ### Core MLを拡張するツール
 
 #### Vision
 
-Visionは画像を解析する枠組みで、その結果をCore MLに送れます。  
-画像を識別するための学習モデルを用意すれば、  
+Visionは画像を解析する枠組みで、  
+その結果をCore MLに送れます。  
+画像を識別するための**学習モデル**を用意すれば、  
 画像から撮影した場所（例：空港・寝室・森）や、  
 主な被写体（例：木・動物・食品・車・人）などを  
 判別できます。
@@ -102,9 +105,19 @@ Visionは画像を解析する枠組みで、その結果をCore MLに送れま�
 
 | アプリの動き | |
 |:--:|:--|
-| <img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" >| 1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示 |
+| 1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示 | <img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" >|
 
 ---
+
+<table>
+<tr>
+  <td colspan=2>作ったアプリ</td>
+</tr>
+<tr>
+  <td><img src="https://user-images.githubusercontent.com/16277668/43588161-d973f59a-96a6-11e8-9ac4-065edbedeb04.gif" width="200px" ></td>
+  <td>1. 画像を選択<br />2. Core MLに渡して解析<br />3. 「African Elephant」の画像<br />　　という結果を取得・表示</td>
+</tr>
+</table>
 
 <img width="817" alt="2018-08-02 22 59 49" src="https://user-images.githubusercontent.com/16277668/43588612-d3831480-96a7-11e8-843d-6b50c1820e23.png">
 <img width="820" alt="2018-08-02 22 59 29" src="https://user-images.githubusercontent.com/16277668/43588611-d34ead80-96a7-11e8-8519-64ba90b82af8.png">
