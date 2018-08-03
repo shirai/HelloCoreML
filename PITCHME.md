@@ -24,6 +24,8 @@ iOSチームのアーキテクトとして
 今回はその活動内で得た知見の共有を  
 させていただこうと思います。
 
+<img src="https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png" width="100px">
+
 ---
 
 いくつかネタはあるのですが、  
@@ -174,7 +176,8 @@ func predict(inputImage: UIImage) {
 iOS単体では **<font color="red">学習することはできない</font>**
 
 * NG: 学習モデルを作る・更新する
-* OK: 用意した学習モデルに対してデータを流して解析させる
+* OK: 用意した学習モデルに対してデータを渡して  
+  　　解析させる
 
 <img src="https://docs-assets.developer.apple.com/published/7e05fb5a2e/4b0ecf58-a51a-4bfa-a361-eb77e59ed76e.png">
 
@@ -222,7 +225,7 @@ builder.showInLiveView()
 
 ３. 作ったデータ用フォルダをドラッグ&ドロップ
 
-<img src="https://docs-assets.developer.apple.com/published/3cdbeec34b/77ba7e4d-8d95-4c8e-b81b-03429b7f0ae1.png">
+<img src="https://docs-assets.developer.apple.com/published/3cdbeec34b/77ba7e4d-8d95-4c8e-b81b-03429b7f0ae1.png" width="500px">
 
 ---
 
@@ -234,18 +237,22 @@ builder.showInLiveView()
 
 **<font color="red">完成！！！</font>**
 
-サーバーサイドのライブラリを利用しなくてはいけなかった学習モデル作成が、IDEで行えるようになりました。
+1. ライブラリを使って学習
+2. 変換ツールでXcode用に変換
+
+が必要だった学習モデル作成が、  
+IDEで行えるようになりました
 
 ---
 
-### おわり
+### まとめ
 
 * 学習モデルを作る(macOS10.14~)
 * 学習モデルを使って解析(iOS11~)
 
 ができるようになった
 
---
+---
 
 **アプリ利用者が解析したデータを元に学習モデルを更新して精度を高めていく**
 
