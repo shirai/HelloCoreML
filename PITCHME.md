@@ -146,8 +146,7 @@ Visionは画像を解析する枠組みで、
 
 #### 書いたコード
 
-「画像解析するだけ」なら  
-10行程度書けば実装できます。
+「画像解析するだけ」ならたったの数行！
 
 ```swift
 /// 画像を予測する
@@ -165,6 +164,10 @@ func predict(inputImage: UIImage) {
   try? VNImageRequestHandler(ciImage: ciImage).perform([request])
 }
 ```
+
+@[5](学習モデルを読み込み)
+@[6](解析用リクエストを作成)
+@[13](画像を解析)
 
 ---
 
