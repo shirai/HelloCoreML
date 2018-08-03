@@ -9,7 +9,7 @@
 ![icon](https://user-images.githubusercontent.com/16277668/41948274-ebbee344-79f6-11e8-8f2a-57fe6e2bf4ee.jpg)  
 白井 誠 (shirai makoto)
 
-普段はiPhoneアプリの開発をしています。
+普段はiPhoneアプリの開発をしています
 
 - GitHub: [@shirai](https://github.com/shirai)
 - Qiita: [@sirai](https://qiita.com/sirai)
@@ -19,13 +19,12 @@
 
 ## 本日のお話
 
-iOSチームのアーキテクトとして  
-日々最新情報のキャッチアップに努めています。
-
-今回はその活動内で得た知見の共有を  
-させていただこうと思います。
-
 <img src="https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png" width="100px">
+
+iOSチームのアーキテクトとして  
+日々最新情報のキャッチアップに努めています
+
+今回はその活動で得た知見を共有します
 
 ---
 
@@ -41,7 +40,7 @@ iOSチームのアーキテクトとして
 ## 話さないこと
 
 時間も限られているので  
-今回は以下の内容には触れません。
+今回は以下の内容には触れません
 
 - 人工知能・機械学習とは？という話
 - 自然言語解析など
