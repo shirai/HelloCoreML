@@ -234,13 +234,16 @@ builder.showInLiveView()
 
 ---
 
+<img src="https://user-images.githubusercontent.com/16277668/43619380-5c827694-9708-11e8-9a08-490a8bec9992.png" width="100px">
+
+
 **<font color="red">完成！！！</font>**
 
 1. 既存ライブラリを使って学習
 2. 変換ツールでCore ML用に変換
 
 が必要だった学習モデル作成が、  
-IDEで行えるようになりました
+IDEで出来るようになりました
 
 ---
 
@@ -249,21 +252,39 @@ IDEで行えるようになりました
 * 学習モデルを作る(macOS10.14~)
 * 学習モデルを使って解析(iOS11~)
 
-ができるようになった
+が出来るようになった
 
 ---
 
 **学習モデルを更新して精度を高めていく**
 
-ことがアプリでできるようになることを期待しています！
+がアプリで出来るようになることを期待しています！
 
 <img src="https://docs-assets.developer.apple.com/published/efbf968cc0/0edb3e43-a85c-41d0-9156-b0ee0b7b1d37.png" width="300px">
 
 ---
 
-おまけ: 参考サイト
+**参考サイト**
 
 - [機械学習 \- Apple Developer](https://developer.apple.com/jp/machine-learning/)
 - [\[iOS 11\] Core MLで焼き鳥を機械学習させてみた ｜ Developers\.IO](https://dev.classmethod.jp/smartphone/iphone/ios-11-core-ml-2/)
 - [Create ML \| Apple Developer Documentation](https://developer.apple.com/documentation/create_ml)
 - [Creating an Image Classifier Model \| Apple Developer Documentation](https://developer.apple.com/documentation/create_ml/creating_an_image_classifier_model)
+
+
+---
+
+# おまけ
+
+---
+
+<img src="https://user-images.githubusercontent.com/16277668/43619484-071d97f0-9709-11e8-9441-f02285bb16f6.png" width="300px">
+<img src="https://user-images.githubusercontent.com/16277668/43619486-075f38cc-9709-11e8-90e5-234244ed24e5.png" width="300px">
+
+---
+
+「tusker」？
+
+---
+
+![tusker](https://user-images.githubusercontent.com/16277668/43619496-13d33216-9709-11e8-8d3f-ad6c7fcdcf72.jpg)
