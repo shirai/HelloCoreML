@@ -94,7 +94,7 @@ iPhoneだけで動く人工知能アプリが
 Visionは画像を解析する枠組みで、  
 その結果をCore MLに送れます。  
 
-<img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2017/09/db81e861-1e06-4d14-8915-90707d9b114c.png">
+<img src="https://docs-assets.developer.apple.com/published/479d7b4500/0c857af6-45e4-4fac-ad84-4aeb8c01b5a3.png">
 
 ---
 
@@ -107,6 +107,9 @@ Visionは画像を解析する枠組みで、
 ---
 
 ## 今できること（iOS11）
+
+サンプル学習モデルを利用して  
+作った画像認識アプリをベースに解説
 
 ---
 
@@ -166,28 +169,90 @@ func predict(inputImage: UIImage) {
 
 ### 重要なポイント
 
+---
+
 iOS単体では **<font color="red">学習することはできない</font>**
 
 * NG: 学習モデルを作る・更新する
 * OK: 用意した学習モデルに対してデータを流して解析させる
 
-<img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2017/09/c35ebf2d-ee94-4448-8fae-16420e7cc4ed.png">
+<img src="https://docs-assets.developer.apple.com/published/7e05fb5a2e/4b0ecf58-a51a-4bfa-a361-eb77e59ed76e.png">
 
 ---
 
 ## これからできるようになること（iOS12〜）
 
-**<font color="red">学習することができる</font>**
+---
 
-iOS12では機械学習がバージョンアップされ、  
-「Create ML」が追加されます。
+**<font color="red">まだ学習することはできない。。</font>**
 
-「学習モデルを作る」ことができるようになります！
+---
+
+ただし、サーバー不要で
+
+**<font color="red">学習データを作る仕組みが用意された</font>**
+
+macOS10.14では「Create ML」が追加
+
+<img src="https://docs-assets.developer.apple.com/published/e6ad1efd6a/d926fc62-3dea-4447-86fc-920d4d6c4781.png">
+
+---
+
+### 学習モデルの作り方
+
+１. データ用フォルダを作って画像を用意
+
+<img src="https://docs-assets.developer.apple.com/published/4bd09c3420/b789d462-92c2-4d26-9479-d5288eef2438.png">
+
+---
+
+２. Xcode（iOSアプリ開発IDE）で  
+　　以下のコードを書いて実行
+
+```swift
+// Import CreateMLUI to train the image classifier in the UI.
+// For other Create ML tasks, import CreateML instead.
+import CreateMLUI 
+
+let builder = MLImageClassifierBuilder()
+builder.showInLiveView()
+```
+
+---
+
+３. 作ったデータ用フォルダをドラッグ&ドロップ
+
+<img src="https://docs-assets.developer.apple.com/published/3cdbeec34b/77ba7e4d-8d95-4c8e-b81b-03429b7f0ae1.png">
+
+---
+
+４. 学習モデルを保存
+
+<img src="https://docs-assets.developer.apple.com/published/692e733304/4eaa95da-421f-4812-8938-2bada720444e.png">
+
+---
+
+**<font color="red">完成！！！</font>**
+
+サーバーサイドのライブラリを利用しなくてはいけなかった学習モデル作成が、IDEで行えるようになりました。
 
 ---
 
 ### おわり
 
+* 学習モデルを作る(macOS10.14~)
+* 学習モデルを使って解析(iOS11~)
+
+ができるようになった
+
+--
+
+**アプリ利用者が解析したデータを元に学習モデルを更新して精度を高めていく**
+
+ということが  
+アプリでできるようになることを期待しています！
+
+<img src="https://docs-assets.developer.apple.com/published/efbf968cc0/0edb3e43-a85c-41d0-9156-b0ee0b7b1d37.png">
 
 ---
 
@@ -195,11 +260,5 @@ iOS12では機械学習がバージョンアップされ、
 
 - [機械学習 \- Apple Developer](https://developer.apple.com/jp/machine-learning/)
 - [\[iOS 11\] Core MLで焼き鳥を機械学習させてみた ｜ Developers\.IO](https://dev.classmethod.jp/smartphone/iphone/ios-11-core-ml-2/)
-
----
-
-tempItems
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/440px-African_Bush_Elephant.jpg" width="100px" /> → 
-<img width="130px" alt="african elephant" src="https://user-images.githubusercontent.com/16277668/43587929-4aced166-96a6-11e8-95fa-eddaa7273679.png">
-
+- [Create ML \| Apple Developer Documentation](https://developer.apple.com/documentation/create_ml)
+- [Creating an Image Classifier Model \| Apple Developer Documentation](https://developer.apple.com/documentation/create_ml/creating_an_image_classifier_model)
