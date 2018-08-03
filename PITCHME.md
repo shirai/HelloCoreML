@@ -198,11 +198,10 @@ iOS単体では **<font color="red">学習することはできない</font>**
 
 ---
 
-macOSアップデートでサーバー不要の
+macOSアップデートでサーバー不要の  
+**<font color="red">学習データを作るFW</font>が用意された**
 
-**<font color="red">学習データを作る仕組みが用意された</font>**
-
-macOS10.14では「Create ML」が追加
+「Create ML」(macOS10.14〜)
 
 <img src="https://docs-assets.developer.apple.com/published/e6ad1efd6a/d926fc62-3dea-4447-86fc-920d4d6c4781.png">
 
