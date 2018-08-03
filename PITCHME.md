@@ -281,7 +281,7 @@ IDEで出来るようになりました
 
 ---
 
-# おまけ
+# おまけ１
 
 ---
 
@@ -295,3 +295,16 @@ IDEで出来るようになりました
 ---
 
 <img src="https://user-images.githubusercontent.com/16277668/43619496-13d33216-9709-11e8-8d3f-ad6c7fcdcf72.jpg" height="600">
+
+---
+
+# おまけ２
+
+このスライドは以下の要素を使って作成しています。
+
+* markdown
+* GitHub
+* GitPitch
+
+詳細はこちらのスライド参照  
+https://gitpitch.com/shirai/GitHubTIPS/master?grs=github&t=night
