@@ -278,8 +278,8 @@ IDEで出来るようになりました
 
 ---
 
-<img src="https://user-images.githubusercontent.com/16277668/43619484-071d97f0-9709-11e8-9441-f02285bb16f6.png" hight="600">
-<img src="https://user-images.githubusercontent.com/16277668/43619486-075f38cc-9709-11e8-90e5-234244ed24e5.png" hight="600">
+<img src="https://user-images.githubusercontent.com/16277668/43619484-071d97f0-9709-11e8-9441-f02285bb16f6.png" height="600">
+<img src="https://user-images.githubusercontent.com/16277668/43619486-075f38cc-9709-11e8-90e5-234244ed24e5.png" height="600">
 
 ---
 
@@ -287,4 +287,4 @@ IDEで出来るようになりました
 
 ---
 
-<img src="https://user-images.githubusercontent.com/16277668/43619496-13d33216-9709-11e8-8d3f-ad6c7fcdcf72.jpg" hight="600">
+<img src="https://user-images.githubusercontent.com/16277668/43619496-13d33216-9709-11e8-8d3f-ad6c7fcdcf72.jpg" height="600">
